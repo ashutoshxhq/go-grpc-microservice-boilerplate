@@ -1,0 +1,30 @@
+syntax = "proto3";
+package profile;
+option go_package = "server/profile";
+import "google/api/annotations.proto";
+
+message User {
+  string id = 1;
+  string name = 2;
+  string username = 3;
+  string phone = 4;
+  string email = 5;
+  string role = 6;
+}
+
+message GetUsersRequest {
+}
+
+message GetUsersResponse {
+  repeated User users = 1;
+  bool success = 2;
+  string err = 3;
+}
+
+service UserService {
+  rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/users"
+    };
+  }
+}
