@@ -10,6 +10,7 @@ message User {
   string phone = 4;
   string email = 5;
   string role = 6;
+  bool isBlocked = 7;
 }
 
 message GetUsersRequest {
