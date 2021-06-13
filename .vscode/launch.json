@@ -1,8 +1,0 @@
-{
-    "protoc": {
-        "path": "C:/proto/bin/protoc",
-        "options": [
-            "--proto_path=./proto"
-        ]
-    }
-}
